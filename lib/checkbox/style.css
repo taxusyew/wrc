@@ -1,0 +1,41 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.wrc-checkbox {
+  padding: 0 15px;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 20px;
+}
+.wrc-checkbox .wrc-checkbox-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/icon_boxdeCheck.png);
+  background-size: cover;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+.wrc-checkbox .wrc-checkbox-box.wrc-checkbox-box-on {
+  background-image: url(images/icon_boxCheck.png);
+}
+.wrc-checkbox .wrc-checkbox-box.wrc-checkbox-box-off {
+  background-image: url(images/icon_boxdeCheck.png);
+}

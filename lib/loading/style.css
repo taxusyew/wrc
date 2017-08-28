@@ -1,0 +1,68 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.wrc-loading {
+  left: 25%;
+  top: 40%;
+  padding: 10px;
+  width: 50%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: fixed;
+  border-radius: 3px;
+  color: #fff;
+}
+.wrc-loading.wrc-loading-hide {
+  display: none;
+}
+.wrc-loading .wrc-loading-spin {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+.wrc-loading .wrc-loading-label {
+  padding-top: 10px;
+}

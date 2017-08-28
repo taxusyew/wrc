@@ -1,0 +1,64 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.wrc-passwd {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 90%;
+  margin: 0 5%;
+}
+.wrc-passwd .wrc-passwd-input {
+  position: absolute;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 100;
+  width: 200%;
+  margin-left: -100%;
+}
+.wrc-passwd .wrc-passwd-dot {
+  position: relative;
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+.wrc-passwd .wrc-passwd-dot:last-of-type {
+  border-right: 1px solid #ccc;
+}
+.wrc-passwd .wrc-passwd-dot .wrc-passwd-dot-active {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #111;
+  border-radius: 16px;
+  top: 50%;
+  margin-top: -8px;
+  margin-right: -8px;
+}

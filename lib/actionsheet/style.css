@@ -1,0 +1,38 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.wrc-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+}
+.wrc-actionsheet.wrc-actionsheet-show {
+  -webkit-animation: bottomUp .5s ease;
+          animation: bottomUp .5s ease;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  display: block;
+}

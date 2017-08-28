@@ -1,0 +1,130 @@
+@level1: 0;
+@level2: 100;
+@level3: 1000;
+@level4: 10000;
+
+// -----------
+// 尺寸
+// -----------
+// 圆角
+@radius: 3px;
+@base-line-height: 24px;
+
+// padding
+@normal-padding: 15px;
+@padding-left: @normal-padding;
+@padding-right: @normal-padding;
+@header-pt: 20px;
+@content-wrap: 36px;
+
+// margin
+@margin-left: 10px;
+@margin-right: 10px;
+@arrow-margin-top: 16px;
+@infoItemMT: 30px;
+@infoInputMT: 14px;
+@cardnumInfoMT: 7px;
+
+// line-height
+@tab-line-height: 40px;
+@navitem-line-height: 40px;
+@inputLineHeight: 40px;
+@listitem-height: 40px;
+@button-height: 50px;
+@header-lh: 30px;
+@hintLineHeight: 20px;
+
+// height
+@buttonHeight: 50px;
+@actionTitleHeight: 50px;
+@actionItemHeight: 74px;
+@actionIconHeight: 38px;
+@actionIconRightHeight: 14px;
+@actionItemSubTitleHeight: 20px;
+@cardnumImgHeight: 17px;
+@inputClearHeight: 16px;
+
+// 字体大小
+@hintFS: 12px;
+@infoTitleFS: 13px;
+@inputFontSize: 18px;
+@actionItemFS: 15px;
+
+// -----------
+// 颜色
+// -----------
+@astBorderColor: #eee;
+@borderColor: #54576A;
+@borderActiveColor: #333440;
+@contentBgColor: #FBFEFF;
+// dialog
+@dialogBgColor: #FBFEFF;
+@dialogContentColor: #999;
+@dialogContentBgColor: #FAFDFF;
+@dialogTitleColor: #222;
+
+@errorBgColor:  #FFE5E5;
+@errorTextColor:  #E65757;
+@errorTitle: #FA5558;
+@grayborder: #ddd;
+@hintColor: #999;
+@hintbg: #999;
+@infoTitleColor: #54576A;
+@off-white: rgba(255,255,255, 0.2);
+@passDot: #333440;
+@passWranColor: #E85352;
+@themeBlue: #6492e3;
+@themeRed: #FA5558;
+@transparent-black: rgba(0,0,0, 0.3);
+@white: rgb(255,255,255);
+@protoColor: #1A3500;
+@protoHintColor: #ADADAD;
+@formDisableColor: #999999;
+@placeHolderColor: #ccc;
+@tabBgColor: #6492E3;
+@banklistBorderColor: #eee;
+@textBlue: #6492e3;
+@hintOpacity: .5;
+@resultTitleColor: #333;
+
+// -----------
+// 时间
+// -----------
+@spin-duration: 1s;
+@pulse-duration: 750ms;
+
+
+// -----------
+// 动画
+// -----------
+@keyframes bottomUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+// -----------
+// mixin
+// -----------
+.one-pixel-top (@color: @astBorderColor) {
+    position: relative;
+
+    &:before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 1px;
+        border-top: 1px solid @color;
+        color: @color;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}

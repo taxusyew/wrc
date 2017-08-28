@@ -1,0 +1,55 @@
+@import "../../style/stander.less";
+
+.wrc-dialog{
+	
+ //    z-index: @level3;
+ //    border-radius: @radius;
+ //    background-color: #fff;
+ //    margin: 0 10%;
+
+	z-index: @level3;
+    border-radius: @radius;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+	.wrc-dialog-title {
+		text-align: center;
+		line-height: @header-lh;
+		padding-top: @header-pt;
+	}
+	.wrc-dialog-content {
+        text-align: center;
+        padding: 0 30px 20px 30px;
+        color: #999;
+	}
+	.wrc-dialog-footer {
+		
+		display: flex;
+		border-top: 1px solid @grayborder;
+
+
+
+		.wrc-dialog-btn {
+			flex: 1;
+			text-align: center;
+			cursor: pointer;
+			line-height: 50px;
+
+			&.wrc-dialog-btn-enhance {
+				font-weight: bold;
+			}
+            // color: @themeBlue;
+
+			&:not(:first-child) {
+				border-left: 1px solid @grayborder;
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,90 @@
+@import "../../style/stander.less";
+
+@-webkit-keyframes bounceIn { 
+    0% {opacity: 0;  }
+    100% {opacity: 1;  }
+}
+
+@-webkit-keyframes bounceOut { 
+    0% {opacity: 1; }
+    100% {opacity: 0; }
+}
+
+@-webkit-keyframes spinning { 
+    0%   {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+
+@keyframes bounceIn { 
+    0% {opacity: 0;  }
+    100% {opacity: 1;  }
+}
+
+@keyframes bounceOut { 
+    0% {opacity: 1; }
+    100% {opacity: 0; }
+}
+
+.wrc-toast{
+    position: fixed;
+    z-index: @level4;
+    left: 50%;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    -webkit-transform: translateX(-50%) translateY(-70%);
+    transform: translateX(-50%) translateY(-70%);
+    // -webkit-animation-fill-mode: both;
+    // -webkit-animation-duration: .30s;
+    // -webkit-animation-name: bounceIn;
+    // animation-fill-mode: both;
+    // animation-duration: .30s;
+    // animation-name: bounceIn;
+
+    animation-name: bounceIn;
+    animation-duration: 350ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+
+    padding: 0 15px;
+    line-height: 20px;
+
+    .wrc-toast-content{
+    	line-height: 40px;
+    }
+
+    &.wrc-toast-hide{
+        // display: none !important;
+        // -webkit-animation-fill-mode: both;
+        -webkit-animation-duration: .10s;
+        -webkit-animation-name: bounceOut;
+        // animation-fill-mode: both;
+        animation-fill-mode: forwards;
+        animation-duration: .10s;
+        animation-name: bounceOut;
+    }
+    &.wrc-toast-top{
+        top: 40px;
+    }
+
+    &.wrc-toast-middle{
+        top: 50%;
+    }
+
+    &.wrc-toast-bottom{
+        bottom: 40px;
+    }
+
+    .wrc-toast-loading {
+        display: inline;
+        width: 16px;
+        vertical-align: top;
+        margin-top: 11px;
+        margin-right: 6px;
+
+        -webkit-animation:spinning linear 1s infinite;
+        animation:spinning linear 1s infinite;
+    }
+}

@@ -1,0 +1,44 @@
+@import "../../style/stander.less";
+
+.wrc-plaindialog{
+	
+    z-index: @level3;
+
+    border-radius: @radius;
+	background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	width: 80%;
+    transform: translate(-50%, -50%);
+
+	.wrc-dialog-title {
+		text-align: center;
+		line-height: @header-lh;
+	}
+	.wrc-dialog-content {
+        padding: @padding-left @padding-left 30px @padding-left;
+        color: #999;
+	}
+	.wrc-dialog-footer {
+		
+		display: flex;
+		border-top: 1px solid @grayborder;
+
+
+
+		.wrc-dialog-btn {
+			flex: 1;
+			text-align: center;
+			cursor: pointer;
+			line-height: 50px;
+            color: @themeBlue;
+
+			&:not(:first-child) {
+				border-left: 1px solid @grayborder;
+			}
+		}
+	}
+
+
+}

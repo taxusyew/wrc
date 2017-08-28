@@ -1,0 +1,88 @@
+@import "../../style/stander.less";
+
+.wrc-btn{
+	position: relative;
+    display: block;
+    margin: 10px auto;
+    // padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    border-width: 0;
+    outline: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+    -webkit-user-select:none;
+    height: @buttonHeight;
+    line-height: @buttonHeight;
+
+    &:focus, &:focus {
+        outline:0
+    }
+}
+
+.wrc-btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // border: 1px solid rgba(0,0,0,.2);
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.wrc-btn-default {
+    background-color: #FA5558;;
+    color:#fff;
+}
+.wrc-btn-default:not(.wrc-btn-disabled):active {
+    color:#a1a1a1;
+    background-color:#dedede
+}
+.wrc-btn-default.wrc-btn-disabled {
+    background-color: #CED4DE;
+    color: #fff;
+}
+
+
+.wrc-btn-info {
+    background-color: #04be02;
+}
+.wrc-btn-info:not(.f-btn-disabled):active {
+    color:hsla(0,0%,100%,.4);
+    background-color:#039702
+}
+
+.wrc-btn-danger {
+    background-color: #ef4f4f;
+}
+.wrc-btn-danger:not(.wrc-btn-disabled):active {
+    color:hsla(0,0%,100%,.4);
+    background-color:#B93E3E
+}
+
+.wrc-btn-warn {
+    background-color: #fa9f47;
+}
+.wrc-btn-warn:not(.wrc-btn-disabled):active {
+    color:hsla(0,0%,100%,.4);
+    background-color:#BD7B3A
+}
+
+.wrc-btn-large {
+    width: 100%;
+}
+
+.wrc-btn-disabled {
+    color:hsla(0,0%,100%,.6)
+}

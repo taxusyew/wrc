@@ -1,0 +1,76 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.wrc-cinput-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  line-height: 40px;
+  /*&:before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px solid @borderColor;
+        color: @borderColor;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+
+    &.wrc-cinput-active {
+        &:before{
+            border-bottom: 1.5px solid @borderActiveColor;
+        }
+    }*/
+}
+.wrc-cinput-wrap .wrc-cinput-text {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-size: 16px;
+  width: 80%;
+  padding: 10px 0;
+}
+.wrc-cinput-wrap .wrc-cinput-text::-webkit-input-placeholder {
+  color: #ccc;
+}
+.wrc-cinput-wrap .wrc-tappable {
+  position: absolute;
+  right: 0;
+}
+.wrc-cinput-wrap .wrc-tappable .wrc-cinput-clear {
+  width: 16px;
+  vertical-align: top;
+  margin-top: 12px;
+}
+.wrc-cinput-wrap .wrc-tappable .wrc-cinput-info {
+  width: 16px;
+  vertical-align: top;
+  margin-top: 12px;
+}

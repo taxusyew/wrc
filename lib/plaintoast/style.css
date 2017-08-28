@@ -1,0 +1,110 @@
+@-webkit-keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bottomUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+@-webkit-keyframes bounceOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.wrc-toast {
+  position: fixed;
+  z-index: 10000;
+  left: 50%;
+  -webkit-transform: translateX(5%) translateY(-50%);
+          transform: translateX(5%) translateY(-50%);
+  background: rgba(40, 40, 40, 0.75);
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .10s;
+  animation-duration: .10s;
+  animation-name: bounceIn;
+  -webkit-animation-name: bounceIn;
+  padding: 0 15px;
+  line-height: 20px;
+}
+.wrc-toast .wrc-toast-content {
+  line-height: 40px;
+}
+.wrc-toast.wrc-toast-hide {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .10s;
+  animation-duration: .10s;
+  animation-name: bounceOut;
+  -webkit-animation-name: bounceOut;
+}
+.wrc-toast.wrc-toast-top {
+  top: 40px;
+}
+.wrc-toast.wrc-toast-middle {
+  top: 50%;
+}
+.wrc-toast.wrc-toast-bottom {
+  bottom: 40px;
+}
+.wrc-toast .wrc-toast-loading {
+  display: inline;
+  width: 16px;
+  vertical-align: top;
+  margin-top: 11px;
+  margin-right: 6px;
+  animation: spinning linear 1s infinite;
+  -webkit-animation: spinning linear 1s infinite;
+}
